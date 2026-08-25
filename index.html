@@ -170,18 +170,6 @@
     stroke:var(--amber);
     stroke-width:2.5;
     stroke-linecap:round;
-    transform-origin:center;
-    animation:sweep 3.6s ease-in-out infinite;
-  }
-  .needle.n2{ animation-delay:.3s; }
-  .needle.n3{ animation-delay:.6s; }
-  .needle.n4{ animation-delay:.9s; }
-  @keyframes sweep{
-    0%,100%{ transform:rotate(-16deg); }
-    50%{ transform:rotate(16deg); }
-  }
-  @media (prefers-reduced-motion: reduce){
-    .needle{ animation:none; }
   }
 
   .factor-grid{
@@ -472,57 +460,57 @@
     <h2 class="diagram-title" id="diagram-title">The MARS Diagnostic Panel</h2>
     <p class="diagram-sub">Four independent readings feed into one outcome: individual behavior and performance.</p>
 
-    <svg viewBox="0 0 760 300" role="img" aria-labelledby="diagram-desc">
+    <svg viewBox="0 0 760 420" role="img" aria-labelledby="diagram-desc">
       <desc id="diagram-desc">Diagram showing four gauges labeled Motivation, Ability, Role Perceptions, and Situational Factors, each connected by a wire to a central hub labeled Individual Behavior and Performance.</desc>
 
       <!-- wires from each gauge to center hub -->
-      <path class="wire" d="M120,75 C 250,75 260,150 330,150" />
-      <path class="wire" d="M120,225 C 250,225 260,150 330,150" />
-      <path class="wire" d="M640,75 C 510,75 500,150 430,150" />
-      <path class="wire" d="M640,225 C 510,225 500,150 430,150" />
+      <path class="wire" d="M120,95 C 250,95 260,210 330,210" />
+      <path class="wire" d="M120,325 C 250,325 260,210 330,210" />
+      <path class="wire" d="M640,95 C 510,95 500,210 430,210" />
+      <path class="wire" d="M640,325 C 510,325 500,210 430,210" />
 
       <!-- Gauge: Motivation (top-left) -->
-      <g transform="translate(120,75)">
+      <g transform="translate(120,95)">
         <circle r="52" fill="var(--panel-raised)" stroke="var(--line)" stroke-width="2"/>
         <circle r="52" fill="none" stroke="var(--amber-dim)" stroke-width="2" stroke-dasharray="4 5" opacity=".6"/>
-        <line class="needle" x1="0" y1="6" x2="0" y2="-34"/>
+        <line class="needle" x1="0" y1="6" x2="-24" y2="-27"/>
         <circle r="4" fill="var(--amber)"/>
         <text class="gauge-label" text-anchor="middle" y="76">Motivation</text>
         <text class="gauge-sub" text-anchor="middle" y="92">DIRECTION / INTENSITY / PERSISTENCE</text>
       </g>
 
       <!-- Gauge: Ability (bottom-left) -->
-      <g transform="translate(120,225)">
+      <g transform="translate(120,325)">
         <circle r="52" fill="var(--panel-raised)" stroke="var(--line)" stroke-width="2"/>
         <circle r="52" fill="none" stroke="var(--amber-dim)" stroke-width="2" stroke-dasharray="4 5" opacity=".6"/>
-        <line class="needle n2" x1="0" y1="6" x2="0" y2="-34"/>
+        <line class="needle" x1="0" y1="6" x2="24" y2="-27"/>
         <circle r="4" fill="var(--amber)"/>
-        <text class="gauge-label" text-anchor="middle" y="-64">Ability</text>
-        <text class="gauge-sub" text-anchor="middle" y="76">APTITUDE / LEARNED SKILL / HABIT</text>
+        <text class="gauge-label" text-anchor="middle" y="76">Ability</text>
+        <text class="gauge-sub" text-anchor="middle" y="92">APTITUDE / LEARNED SKILL / HABIT</text>
       </g>
 
       <!-- Gauge: Role Perceptions (top-right) -->
-      <g transform="translate(640,75)">
+      <g transform="translate(640,95)">
         <circle r="52" fill="var(--panel-raised)" stroke="var(--line)" stroke-width="2"/>
         <circle r="52" fill="none" stroke="var(--amber-dim)" stroke-width="2" stroke-dasharray="4 5" opacity=".6"/>
-        <line class="needle n3" x1="0" y1="6" x2="0" y2="-34"/>
+        <line class="needle" x1="0" y1="6" x2="24" y2="-27"/>
         <circle r="4" fill="var(--amber)"/>
         <text class="gauge-label" text-anchor="middle" y="76">Role Perceptions</text>
         <text class="gauge-sub" text-anchor="middle" y="92">UNDERSTANDING WHAT'S EXPECTED</text>
       </g>
 
       <!-- Gauge: Situational Factors (bottom-right) -->
-      <g transform="translate(640,225)">
+      <g transform="translate(640,325)">
         <circle r="52" fill="var(--panel-raised)" stroke="var(--line)" stroke-width="2"/>
         <circle r="52" fill="none" stroke="var(--amber-dim)" stroke-width="2" stroke-dasharray="4 5" opacity=".6"/>
-        <line class="needle n4" x1="0" y1="6" x2="0" y2="-34"/>
+        <line class="needle" x1="0" y1="6" x2="-24" y2="-27"/>
         <circle r="4" fill="var(--amber)"/>
-        <text class="gauge-label" text-anchor="middle" y="-64">Situational Factors</text>
-        <text class="gauge-sub" text-anchor="middle" y="76">CONDITIONS BEYOND CONTROL</text>
+        <text class="gauge-label" text-anchor="middle" y="76">Situational Factors</text>
+        <text class="gauge-sub" text-anchor="middle" y="92">CONDITIONS BEYOND CONTROL</text>
       </g>
 
       <!-- Center hub -->
-      <g transform="translate(380,150)">
+      <g transform="translate(380,210)">
         <rect x="-75" y="-38" width="150" height="76" rx="12" fill="var(--amber)"/>
         <text class="hub-text" text-anchor="middle" y="-6">INDIVIDUAL</text>
         <text class="hub-text" text-anchor="middle" y="12">BEHAVIOR &amp;</text>
